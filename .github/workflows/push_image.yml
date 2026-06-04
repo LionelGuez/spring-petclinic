@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        use: actions/checkout@v4 
+        uses: actions/checkout@v4 
 
       - name: Extraire la version du pom.xml
         id: get_version
