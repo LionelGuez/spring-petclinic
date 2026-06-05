@@ -1,9 +1,9 @@
 name: Psuh image
 on:
   push:
-    branches: [main]
+    branches: [not]
   pull_request:
-    branches: [main]
+    branches: [not]
   workflow_dispatch:
 
 permissions:
