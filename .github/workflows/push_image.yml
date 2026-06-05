@@ -78,7 +78,7 @@ jobs:
         run: |
           pwd 
           ls ../..
-          ../../kustomize edit set image ghcr.io/LionelGuez/spring-petclinic=ghcr.io/LionelGuez/spring-petclinic:${{ github.sha }}
+          ../../kustomize edit set image ghcr.io/lionelguez/spring-petclinic=ghcr.io/lionelguez/spring-petclinic:${{ github.sha }}
 
       - name: Commit et Push vers le dépôt d'infrastructure
         working-directory: ./infra-repo
