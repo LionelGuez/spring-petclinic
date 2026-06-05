@@ -58,7 +58,7 @@ jobs:
 
 
   update-gitops:
-    needs: build # Mettre ici le nom de votre job précédent (celui qui push sur GHCR)
+    needs: push # Mettre ici le nom de votre job précédent (celui qui push sur GHCR)
     runs-on: ubuntu-latest
     steps:
       - name: Cloner le dépôt d'infrastructure
