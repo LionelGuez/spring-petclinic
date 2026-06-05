@@ -72,11 +72,13 @@ jobs:
         working-directory: .
         run: |
           curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash 
-          
+
       - name: Mettre à jour la version de l'image
         working-directory: ./infra-repo/dev
         run: |
-          kustomize edit set image spring-petclinic=ghcr.io/<VOTRE_USER_GITHUB>/spring-petclinic:${{ github.sha }}
+          pwd 
+          ls ../..
+          ../../kustomize edit set image spring-petclinic=ghcr.io/<VOTRE_USER_GITHUB>/spring-petclinic:${{ github.sha }}
 
       - name: Commit et Push vers le dépôt d'infrastructure
         working-directory: ./infra-repo
